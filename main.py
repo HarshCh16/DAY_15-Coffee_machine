@@ -1,6 +1,5 @@
 from menu_resources import menu
-from menu_resources import resources
-from menu_resources import menu
+from menu_resources import resources , menu
 
 def handle_recipe(user_choice , processed_coins):
     global money
@@ -15,7 +14,7 @@ def handle_recipe(user_choice , processed_coins):
         print(f"Here is your {user_choice}. Enjoy!")
         money += drink["cost"]
         if change > 0:
-            print(f"Here is you change ${change}.")
+            print(f"Here is you change: ${change}.")
         else:
             return
     else:
@@ -54,4 +53,5 @@ while machine_off == False:
         machine_off = True
     else:
         print("Invalid input")
+        break
 
